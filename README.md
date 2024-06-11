@@ -10,16 +10,16 @@ The following is a simple pure python implementation of forward addative registr
 from LKReg import LKForwardAddativeImageReg as LKReg
 import cv2
  ```
+##### Load images 
 ```python
-#load images 
 fixed = cv2.cvtColor(cv2.imread('fixed.png'), cv2.COLOR_BGR2GRAY)
 moving = cv2.cvtColor(cv2.imread('moving.png'), cv2.COLOR_BGR2GRAY)
 ```
-### perform registration
+##### Perform registration
 ```python
 tforms, deltas  = LKReg.iterativeReg(fixed, moving, niter = 150, npyramids = 2)
 ```
-#show before and after
+##### Show before and after
 ```python
 LKReg.imshowpair(fixed,moving,tforms[0], figureTitle = 'before')
 LKReg.imshowpair(fixed,moving,tforms[-1], figureTitle = 'after')

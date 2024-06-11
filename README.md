@@ -6,9 +6,10 @@ The following is a simple pure python implementation of forward addative registr
 
 # Simple example  : 
 
-```import LKForwardAddativeImageReg as LKReg ```
+```python
+import LKForwardAddativeImageReg as LKReg
 import cv2
-
+ ```
 #load images 
 fixed = cv2.cvtColor(cv2.imread('fixed.png'), cv2.COLOR_BGR2GRAY)
 moving = cv2.cvtColor(cv2.imread('moving.png'), cv2.COLOR_BGR2GRAY)
